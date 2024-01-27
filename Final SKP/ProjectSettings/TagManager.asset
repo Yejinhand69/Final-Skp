@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Toilet01
+  - Toilet02
+  - Toilet03
+  - Toilet04
+  - Toilet05
   layers:
   - Default
   - TransparentFX
