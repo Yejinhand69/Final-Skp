@@ -10,6 +10,7 @@ public class ToiletClick : MonoBehaviour, IPointerDownHandler
 
     public GameObject person01LookRight;
     public GameObject person03LookLeft;
+    public GameObject person03LookRight;
 
     public GameObject person02Player;
     public GameObject person04Player;
@@ -21,6 +22,7 @@ public class ToiletClick : MonoBehaviour, IPointerDownHandler
     {
         person01LookRight.SetActive(false);
         person03LookLeft.SetActive(false);
+        person03LookRight.SetActive(false);
 
         person02Player.SetActive(false);
         person04Player.SetActive(false);
@@ -51,6 +53,7 @@ public class ToiletClick : MonoBehaviour, IPointerDownHandler
                
                 Debug.Log("Clicking on 04");
                 person04Player.SetActive(true);
+                person03LookRight.SetActive(true);
 
                 StartCoroutine(LoadNextLevelWithDelay());
                 //You look at 03 logic 
