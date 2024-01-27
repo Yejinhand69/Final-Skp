@@ -1271,7 +1271,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Waves at him
+  m_text: Waves At Him
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cc80a4f3c87094e4786a8d81f4f4fd29, type: 2}
   m_sharedMaterial: {fileID: 4537239598478966364, guid: cc80a4f3c87094e4786a8d81f4f4fd29, type: 2}
@@ -2931,7 +2931,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LEFT IT OPEN
+  m_text: Left It Open
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cc80a4f3c87094e4786a8d81f4f4fd29, type: 2}
   m_sharedMaterial: {fileID: 4537239598478966364, guid: cc80a4f3c87094e4786a8d81f4f4fd29, type: 2}

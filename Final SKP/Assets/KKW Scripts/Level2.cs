@@ -67,6 +67,7 @@ public class Level2 : MonoBehaviour
         options.SetActive(true);
         title.SetActive(true);
         bgTrans.SetActive(true);
+
     }
 
     IEnumerator Phase1()
@@ -82,7 +83,8 @@ public class Level2 : MonoBehaviour
         closeDoor.SetActive(true);
         yield return new WaitForSeconds(2);
         animator.SetTrigger("Fade_Out");
-        yield break;
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Level 3");
 
     }
 
@@ -100,7 +102,8 @@ public class Level2 : MonoBehaviour
         waiterOp2.SetActive(true);
         yield return new WaitForSeconds(2);
         animator.SetTrigger("Fade_Out");
-        yield break;
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Level 3");
     }
 
     IEnumerator Phase3()
@@ -118,8 +121,8 @@ public class Level2 : MonoBehaviour
         waiterOp3.SetActive(true);
         yield return new WaitForSeconds(2);
         animator.SetTrigger("Fade_Out");
-
-        yield break;
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Level 3");
     }
 
 }

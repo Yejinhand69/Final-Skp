@@ -83,6 +83,8 @@ public class Level5 : MonoBehaviour
         f3.SetActive(true);
         yield return new WaitForSeconds(2);
         animator.SetTrigger("Fade_Out");
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Level 6");
 
     }
 
@@ -99,6 +101,8 @@ public class Level5 : MonoBehaviour
         f3.SetActive(true);
         yield return new WaitForSeconds(2);
         animator.SetTrigger("Fade_Out");
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Level 6");
     }
 
     IEnumerator Phase3()
@@ -111,8 +115,8 @@ public class Level5 : MonoBehaviour
         op3s.SetActive(true);
         yield return new WaitForSeconds(4);
         animator.SetTrigger("Fade_Out");
-
-        yield break;
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Level 6");
     }
 
 }
