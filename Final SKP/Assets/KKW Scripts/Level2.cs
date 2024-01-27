@@ -6,18 +6,11 @@ using UnityEngine.SceneManagement;
 public class Level2 : MonoBehaviour
 {
 
-    public GameObject bg;
-    public GameObject fren1;
-    public GameObject fren2;
-    public GameObject fren3;
-    public GameObject waiter;
-    public GameObject player;
-    public GameObject openDoor;
-    public GameObject closeDoor;
-    public GameObject options;
-    public GameObject title;
-    public GameObject bgTrans;
-    public Animator animator;
+    public GameObject pic1;
+    public GameObject pic2;
+    public GameObject pic3;
+    public GameObject pic4;
+    public GameObject pic5;
 
     LevelSelection levelSelection;
     // Start is called before the first frame update
@@ -35,7 +28,10 @@ public class Level2 : MonoBehaviour
 
     public void Option1()
     {
-        StartCoroutine(Phase1());
+        //StartCoroutine(Phase1());
+        levelSelection.lvl2completed = true;
+        Debug.Log(levelSelection.lvl2completed);
+        SceneManager.LoadScene("LevelSelection");
     }
     public void Option2()
     {
@@ -50,39 +46,42 @@ public class Level2 : MonoBehaviour
 
     IEnumerator Prephase()
     {
-        yield return new WaitForSeconds(4);
-        fren1.SetActive(true);
-        fren2.SetActive(true);
-        fren3.SetActive(true);
         yield return new WaitForSeconds(5);
-        fren1.SetActive(false);
-        fren2.SetActive(false);
-        fren3.SetActive(false);
-        waiter.SetActive(true); 
-        yield return new WaitForSeconds(1);
-        options.SetActive(true);
-        title.SetActive(true);
-        bgTrans.SetActive(true);
+        pic1.SetActive(false);
+        pic2.SetActive(false);
+        pic3.SetActive(true);
+        yield return new WaitForSeconds(5);
+        pic5.SetActive(true);
     }
 
     IEnumerator Phase1()
     {
-        animator.SetTrigger("Fade_Out");
-        yield break;
-
+        yield return new WaitForSeconds(5);
+        pic1.SetActive(false);
+        pic2.SetActive(false);
+        pic3.SetActive(true);
+        yield return new WaitForSeconds(5);
+        pic5.SetActive(true);
     }
 
     IEnumerator Phase2()
     {
-        animator.SetTrigger("Fade_Out");
-        yield break;
+        yield return new WaitForSeconds(5);
+        pic1.SetActive(false);
+        pic2.SetActive(false);
+        pic3.SetActive(true);
+        yield return new WaitForSeconds(5);
+        pic5.SetActive(true);
     }
 
     IEnumerator Phase3()
     {
-        animator.SetTrigger("Fade_Out");
-
-        yield break;
+        yield return new WaitForSeconds(5);
+        pic1.SetActive(false);
+        pic2.SetActive(false);
+        pic3.SetActive(true);
+        yield return new WaitForSeconds(5);
+        pic5.SetActive(true);
     }
 
 }
