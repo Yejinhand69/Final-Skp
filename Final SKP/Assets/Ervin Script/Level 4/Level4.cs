@@ -13,6 +13,13 @@ public class Level4 : MonoBehaviour
     public GameObject runningPeople;
     public GameObject newPeopleStanding;
 
+    public GameObject playerCloseDoor;
+    public GameObject people01LookRight;
+    public GameObject people02LookRight;
+
+    public GameObject leftDoorClose;
+    public GameObject rightDoorClose;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +29,13 @@ public class Level4 : MonoBehaviour
         playerOpeningDoor.SetActive(false);
         runningPeople.SetActive(true);
         newPeopleStanding.SetActive(false);
+
+        playerCloseDoor.SetActive(false);
+        people01LookRight.SetActive(false);
+        people02LookRight.SetActive(false);
+
+        leftDoorClose.SetActive(false);
+        rightDoorClose.SetActive(false);
 
         StartCoroutine(ShowOptionAfterDelay());
     }
@@ -49,6 +63,14 @@ public class Level4 : MonoBehaviour
     public void Option02()
     {
         Option.SetActive(false);
+
+        player.SetActive(false);
+        playerCloseDoor.SetActive(true);
+        people01LookRight.SetActive(true);
+        people02LookRight.SetActive(true);
+
+        leftDoorClose.SetActive(true);
+        rightDoorClose.SetActive(true);
 
         StartCoroutine(LoadNextLevelWithDelay());
     }
