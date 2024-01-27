@@ -79,7 +79,7 @@ public class ToiletClick : MonoBehaviour, IPointerDownHandler
         animator.SetTrigger("Fade_Out");
 
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Level 2");
 
         //load next scene logic
     }
