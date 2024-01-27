@@ -7,27 +7,67 @@ using UnityEngine.SceneManagement;
 public class ToiletClick : MonoBehaviour, IPointerDownHandler
 {
     public Animator animator;
+
+    public GameObject person01LookRight;
+    public GameObject person03LookLeft;
+
+    public GameObject person02Player;
+    public GameObject person04Player;
+    public GameObject person05Player;
+
+    private static bool clicked = false;
+
+    private void Awake()
+    {
+        person01LookRight.SetActive(false);
+        person03LookLeft.SetActive(false);
+
+        person02Player.SetActive(false);
+        person04Player.SetActive(false);
+        person05Player.SetActive(false);
+
+        clicked = false;
+    }
+
     public void OnPointerDown(PointerEventData eventData)
     {
-        if(gameObject.CompareTag("Toilet02"))
+        if (clicked == false)
         {
-            Debug.Log("Clicking on 02");
-            StartCoroutine(LoadNextLevelWithDelay());
-            //Two people will look at you logic
+
+            if (gameObject.CompareTag("Toilet02"))
+            {
+                
+                Debug.Log("Clicking on 02");
+                person01LookRight.SetActive(true);
+                person03LookLeft.SetActive(true);
+                person02Player.SetActive(true);
+
+                StartCoroutine(LoadNextLevelWithDelay());
+                //Two people will look at you logic
+            }
+
+            if (gameObject.CompareTag("Toilet04"))
+            {
+               
+                Debug.Log("Clicking on 04");
+                person04Player.SetActive(true);
+
+                StartCoroutine(LoadNextLevelWithDelay());
+                //You look at 03 logic 
+            }
+
+            if (gameObject.CompareTag("Toilet05"))
+            {
+               
+                Debug.Log("Clicking on 05");
+                person05Player.SetActive(true);
+
+                StartCoroutine(LoadNextLevelWithDelay());
+                //Correct logic
+            }
         }
 
-        if (gameObject.CompareTag("Toilet04"))
-        {
-            Debug.Log("Clicking on 04");
-            //You look at 03 logic 
-        }
-
-        if (gameObject.CompareTag("Toilet05"))
-        {
-            Debug.Log("Clicking on 05");
-            //Correct logic
-        }
-
+        clicked = true;
     }
 
     private IEnumerator LoadNextLevelWithDelay()
