@@ -11,7 +11,12 @@ public class Level2 : MonoBehaviour
     public GameObject fren2;
     public GameObject fren3;
     public GameObject waiter;
+    public GameObject waiter1;
+    public GameObject waiterOp1;
+    public GameObject waiterOp2;
+    public GameObject waiterOp3;
     public GameObject player;
+    public GameObject playerOp3;
     public GameObject openDoor;
     public GameObject closeDoor;
     public GameObject options;
@@ -24,7 +29,6 @@ public class Level2 : MonoBehaviour
     void Start()
     {
         StartCoroutine(Prephase());
-        Debug.Log(levelSelection.lvl2completed);
     }
 
     // Update is called once per frame
@@ -67,6 +71,16 @@ public class Level2 : MonoBehaviour
 
     IEnumerator Phase1()
     {
+        options.SetActive(false);
+        title.SetActive(false);
+        bgTrans.SetActive(false);
+        waiter.SetActive(false);
+        waiterOp1.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        player.SetActive(false);
+        openDoor.SetActive(false);
+        closeDoor.SetActive(true);
+        yield return new WaitForSeconds(2);
         animator.SetTrigger("Fade_Out");
         yield break;
 
@@ -74,12 +88,35 @@ public class Level2 : MonoBehaviour
 
     IEnumerator Phase2()
     {
+        options.SetActive(false);
+        title.SetActive(false);
+        bgTrans.SetActive(false);
+        waiter.SetActive(false);
+        waiter.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        player.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        waiter.SetActive(false);
+        waiterOp2.SetActive(true);
+        yield return new WaitForSeconds(2);
         animator.SetTrigger("Fade_Out");
         yield break;
     }
 
     IEnumerator Phase3()
     {
+        options.SetActive(false);
+        title.SetActive(false);
+        bgTrans.SetActive(false);
+        waiter.SetActive(false);
+        waiter.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        player.SetActive(false);
+        playerOp3.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        waiter.SetActive(false); 
+        waiterOp3.SetActive(true);
+        yield return new WaitForSeconds(2);
         animator.SetTrigger("Fade_Out");
 
         yield break;
