@@ -9,6 +9,9 @@ TagManager:
   - Toilet03
   - Toilet04
   - Toilet05
+  - Sunglasses
+  - Clothes
+  - Mic
   layers:
   - Default
   - TransparentFX
