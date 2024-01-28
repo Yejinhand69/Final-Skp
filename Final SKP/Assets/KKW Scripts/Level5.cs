@@ -36,7 +36,6 @@ public class Level5 : MonoBehaviour
         op3s.SetActive(false);
         title.SetActive(false);
         StartCoroutine(Prephase());
-        Debug.Log(levelSelection.lvl2completed);
     }
 
     // Update is called once per frame
@@ -55,6 +54,7 @@ public class Level5 : MonoBehaviour
     }
     public void Option3()
     {
+        PlayerPrefs.SetInt("lvl5completed", 1);
         StartCoroutine(Phase3());
     }
 

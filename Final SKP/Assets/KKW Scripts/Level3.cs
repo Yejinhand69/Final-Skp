@@ -48,6 +48,7 @@ public class Level3 : MonoBehaviour
     }
     public void Option2()
     {
+        PlayerPrefs.SetInt("lvl3completed", 1);
         StartCoroutine(Phase2());
     }
     public void Option3()

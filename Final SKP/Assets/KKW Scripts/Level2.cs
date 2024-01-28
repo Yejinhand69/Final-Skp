@@ -25,6 +25,7 @@ public class Level2 : MonoBehaviour
     public Animator animator;
 
     LevelSelection levelSelection;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +40,7 @@ public class Level2 : MonoBehaviour
 
     public void Option1()
     {
+        PlayerPrefs.SetInt("lvl2completed", 1);
         StartCoroutine(Phase1());
     }
     public void Option2()
