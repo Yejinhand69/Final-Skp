@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static UnityEditor.Progress;
-using static UnityEngine.Rendering.DebugUI;
 
 public class Level3 : MonoBehaviour
 {
