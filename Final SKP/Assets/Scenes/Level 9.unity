@@ -1617,6 +1617,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2778939923052103938, guid: 03794a58cc136ba4ea6d854e9b22b214, type: 3}
+      propertyPath: episodeImage
+      value: 
+      objectReference: {fileID: 2084366553}
     - target: {fileID: 2778939923052103939, guid: 03794a58cc136ba4ea6d854e9b22b214, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1963,3 +1967,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974768756}
   m_CullTransparentMesh: 1
+--- !u!1 &2084366553 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4532253380503668169, guid: 826591fedc8dd044287ef6b3ef531f8a, type: 3}
+  m_PrefabInstance: {fileID: 1814152039}
+  m_PrefabAsset: {fileID: 0}
